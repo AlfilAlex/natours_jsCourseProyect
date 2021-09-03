@@ -23,7 +23,9 @@ const app = express();
 /* -------------------------------------------------------------------------- */
 //*                            Creating middleware                            */
 /* -------------------------------------------------------------------------- */
-app.use(morgan('dev'));
+if (process.env.NODE_N === 'development') {
+    app.use(morgan('dev'));
+}
 app.use(express.json());
 
 //
