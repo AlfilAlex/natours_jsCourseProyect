@@ -169,17 +169,5 @@
             "2022-01-16,10:00",
             "2022-12-12,10:00"
         ]
-    },
-    {
-        "id": 9,
-        "name": "test tours",
-        "duration": 10,
-        "dificulty": "easy"
-    },
-    {
-        "id": 10,
-        "name": "test tours",
-        "duration": 10,
-        "dificulty": "easy"
     }
 ]

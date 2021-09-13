@@ -8,6 +8,14 @@ const tourControler = require('./../controlers/tourControler.js');
 // * Route: /api/v1/tours
 // - - - - - - - - - - - -
 
+router.route('/tour-stats').get(tourControler.getTourStats);
+
+router.route('/montly-plan/:year').get(tourControler.getMontlyPlan);
+
+router
+    .route('/top-5-cheap')
+    .get(tourControler.aliasTopTour, tourControler.getAllTours);
+
 router
     .route('/')
     .get(tourControler.getAllTours)

@@ -3,10 +3,9 @@
 /*                              Importing section                             */
 /* -------------------------------------------------------------------------- */
 
-const app = require('./app.js');
-
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
+const app = require('./app.js');
 
 /* -------------------------------------------------------------------------- */
 //*                                 MONGO DB                                  */
@@ -23,6 +22,7 @@ mongoose
         useNewUrlParser: true,
         useCreateIndex: true,
         useFindAndModify: false,
+        useUnifiedTopology: true,
     })
     .then((con) => {
         console.log('MongoDB connection succesful');
